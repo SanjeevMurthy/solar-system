@@ -25,6 +25,8 @@ jobs:
     
         - name: Unit Testing
           run: npm test
+          env:
+            NODE_OPTIONS: --trace-deprecation
           
         - name: Archive Test Result
           uses: actions/upload-artifact@v4
